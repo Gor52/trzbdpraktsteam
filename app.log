@@ -1,0 +1,284 @@
+2026-05-13T01:13:56	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:13:59	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /favicon.ico	result=status=404
+2026-05-13T01:14:45	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=predict_ajax	result=позитивный;0.898;model=LogisticRegression
+2026-05-13T01:14:45	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=POST /predict_ajax	result=status=200
+2026-05-13T01:14:47	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=predict_ajax	result=позитивный;0.898;model=LogisticRegression
+2026-05-13T01:14:47	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=POST /predict_ajax	result=status=200
+2026-05-13T01:14:53	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:14:54	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=products	result=rows=19
+2026-05-13T01:14:54	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /products	result=status=200
+2026-05-13T01:15:17	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=models	result=view
+2026-05-13T01:15:21	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /models	result=status=200
+2026-05-13T01:15:21	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=clusters	result=view
+2026-05-13T01:15:21	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /clusters	result=status=200
+2026-05-13T01:15:25	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:15:33	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=clusters	result=view
+2026-05-13T01:15:33	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /clusters	result=status=200
+2026-05-13T01:15:45	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=api_cluster_samples	result=cluster=0;n=12
+2026-05-13T01:15:45	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /api/cluster_samples/0	result=status=200
+2026-05-13T01:15:48	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=api_cluster_samples	result=cluster=2;n=12
+2026-05-13T01:15:48	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /api/cluster_samples/2	result=status=200
+2026-05-13T01:15:50	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=api_cluster_samples	result=cluster=3;n=12
+2026-05-13T01:15:50	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /api/cluster_samples/3	result=status=200
+2026-05-13T01:16:22	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=models	result=view
+2026-05-13T01:16:22	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /models	result=status=200
+2026-05-13T01:16:34	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:21:55	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=500
+2026-05-13T01:21:56	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=500
+2026-05-13T01:24:06	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:24:07	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:24:35	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=clusters	result=view
+2026-05-13T01:24:38	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /clusters	result=status=200
+2026-05-13T01:24:48	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=api_cluster_samples	result=cluster=2;n=12
+2026-05-13T01:24:48	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /api/cluster_samples/2	result=status=200
+2026-05-13T01:25:04	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:25:53	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=submit_review	result=rating=4;sentiment=позитивный;conf=0.961
+2026-05-13T01:25:53	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=POST /submit_review	result=status=302
+2026-05-13T01:25:54	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:26:00	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:26:12	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=products	result=rows=19
+2026-05-13T01:26:12	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /products	result=status=200
+2026-05-13T01:26:24	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=clusters	result=view
+2026-05-13T01:26:24	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /clusters	result=status=200
+2026-05-13T01:26:35	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=products	result=rows=19
+2026-05-13T01:26:35	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /products	result=status=200
+2026-05-13T01:26:40	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:27:03	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:27:09	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:28:36	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:28:49	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:29:03	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:35:43	user=50c3f8aa-fb6d-45d5-8203-f19130d7ba62	action=GET /	result=status=200
+2026-05-13T01:43:00	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:43:01	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T01:43:14	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-13T01:43:14	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=POST /predict_ajax	result=status=200
+2026-05-13T01:43:37	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=products	result=rows=19
+2026-05-13T01:43:37	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /products	result=status=200
+2026-05-13T01:43:48	user=90c20868-cbaa-4a8d-97cb-da5be084fc96	action=GET /	result=status=200
+2026-05-13T13:19:48	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=GET /	result=status=200
+2026-05-13T13:19:49	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=GET /favicon.ico	result=status=404
+2026-05-13T13:46:26	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=GET /	result=status=200
+2026-05-13T13:46:51	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=clusters	result=view
+2026-05-13T13:46:51	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=GET /clusters	result=status=200
+2026-05-13T13:46:58	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=api_cluster_samples	result=cluster=3;n=12
+2026-05-13T13:46:58	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=GET /api/cluster_samples/3	result=status=200
+2026-05-13T13:47:10	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=api_cluster_samples	result=cluster=3;n=12
+2026-05-13T13:47:10	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=GET /api/cluster_samples/3	result=status=200
+2026-05-13T13:47:11	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=api_cluster_samples	result=cluster=1;n=12
+2026-05-13T13:47:11	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=GET /api/cluster_samples/1	result=status=200
+2026-05-13T13:47:15	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=models	result=view
+2026-05-13T13:47:15	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=GET /models	result=status=200
+2026-05-13T13:47:28	user=2ba34c1b-a30a-4009-880c-2f5582ab1ac4	action=GET /	result=status=200
+2026-05-14T21:47:33	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /	result=status=200
+2026-05-14T21:47:34	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /favicon.ico	result=status=404
+2026-05-14T21:47:46	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /	result=status=200
+2026-05-14T21:48:21	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=submit_review	result=rating=4;sentiment=позитивный;conf=0.953
+2026-05-14T21:48:21	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=POST /submit_review	result=status=302
+2026-05-14T21:48:23	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /	result=status=200
+2026-05-14T22:03:34	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /	result=status=200
+2026-05-14T22:03:37	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=products	result=rows=19
+2026-05-14T22:03:37	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /products	result=status=200
+2026-05-14T22:03:53	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=models	result=view
+2026-05-14T22:03:53	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /models	result=status=200
+2026-05-14T22:06:06	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=clusters	result=view
+2026-05-14T22:06:06	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /clusters	result=status=200
+2026-05-14T22:06:12	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=api_cluster_samples	result=cluster=3;n=12
+2026-05-14T22:06:12	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /api/cluster_samples/3	result=status=200
+2026-05-14T22:06:23	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=products	result=rows=19
+2026-05-14T22:06:23	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /products	result=status=200
+2026-05-14T22:07:48	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /	result=status=200
+2026-05-14T22:07:55	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-14T22:07:55	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=POST /predict_ajax	result=status=200
+2026-05-14T22:08:00	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-14T22:08:00	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=POST /predict_ajax	result=status=200
+2026-05-14T22:08:00	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-14T22:08:00	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=POST /predict_ajax	result=status=200
+2026-05-14T22:08:01	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-14T22:08:01	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=POST /predict_ajax	result=status=200
+2026-05-14T22:08:50	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-14T22:08:50	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=POST /predict_ajax	result=status=200
+2026-05-14T22:42:03	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=products	result=rows=19
+2026-05-14T22:42:03	user=70ef16ce-f0dd-4808-bb66-db55909d20d1	action=GET /products	result=status=200
+2026-05-14T23:23:41	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-14T23:23:42	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /favicon.ico	result=status=404
+2026-05-14T23:26:16	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=products	result=rows=19
+2026-05-14T23:26:16	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /products	result=status=200
+2026-05-14T23:28:31	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=models	result=view
+2026-05-14T23:28:31	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /models	result=status=200
+2026-05-14T23:28:35	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=models	result=view
+2026-05-14T23:28:35	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /models	result=status=200
+2026-05-14T23:28:40	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-14T23:28:48	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=products	result=rows=19
+2026-05-14T23:28:48	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /products	result=status=200
+2026-05-14T23:28:52	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=models	result=view
+2026-05-14T23:28:52	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /models	result=status=200
+2026-05-14T23:28:55	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=clusters	result=view
+2026-05-14T23:28:55	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /clusters	result=status=200
+2026-05-14T23:29:03	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:21:06	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:26:56	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:27:02	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=models	result=view
+2026-05-15T00:27:02	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /models	result=status=200
+2026-05-15T00:27:03	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=products	result=rows=19
+2026-05-15T00:27:03	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /products	result=status=200
+2026-05-15T00:27:05	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:27:12	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=models	result=view
+2026-05-15T00:27:12	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /models	result=status=200
+2026-05-15T00:27:14	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=clusters	result=view
+2026-05-15T00:27:14	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /clusters	result=status=200
+2026-05-15T00:27:17	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:27:18	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=models	result=view
+2026-05-15T00:27:18	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /models	result=status=200
+2026-05-15T00:27:21	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:27:27	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-15T00:27:27	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:31:59	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-15T00:31:59	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:32:06	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-15T00:32:06	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:32:08	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-15T00:32:08	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:32:38	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.905;model=XGBoost
+2026-05-15T00:32:38	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:32:39	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.905;model=XGBoost
+2026-05-15T00:32:39	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:32:39	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.905;model=XGBoost
+2026-05-15T00:32:39	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:32:43	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.905;model=XGBoost
+2026-05-15T00:32:43	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:32:45	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=submit_review	result=rating=1;sentiment=позитивный;conf=0.905
+2026-05-15T00:32:45	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /submit_review	result=status=302
+2026-05-15T00:32:46	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:32:48	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.952;model=XGBoost
+2026-05-15T00:32:48	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:32:53	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:33:43	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=products	result=rows=19
+2026-05-15T00:33:43	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /products	result=status=200
+2026-05-15T00:33:53	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=models	result=view
+2026-05-15T00:33:53	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /models	result=status=200
+2026-05-15T00:34:03	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=clusters	result=view
+2026-05-15T00:34:03	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /clusters	result=status=200
+2026-05-15T00:34:08	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=api_cluster_samples	result=cluster=3;n=12
+2026-05-15T00:34:08	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /api/cluster_samples/3	result=status=200
+2026-05-15T00:34:13	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=api_cluster_samples	result=cluster=1;n=12
+2026-05-15T00:34:13	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /api/cluster_samples/1	result=status=200
+2026-05-15T00:34:19	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=api_cluster_samples	result=cluster=0;n=12
+2026-05-15T00:34:19	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /api/cluster_samples/0	result=status=200
+2026-05-15T00:34:23	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=api_cluster_samples	result=cluster=5;n=12
+2026-05-15T00:34:23	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /api/cluster_samples/5	result=status=200
+2026-05-15T00:34:36	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=api_cluster_samples	result=cluster=4;n=12
+2026-05-15T00:34:36	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /api/cluster_samples/4	result=status=200
+2026-05-15T00:34:41	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=api_cluster_samples	result=cluster=3;n=12
+2026-05-15T00:34:41	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /api/cluster_samples/3	result=status=200
+2026-05-15T00:34:51	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:52:06	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:52:54	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.994;model=CatBoost
+2026-05-15T00:52:54	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:53:00	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.994;model=CatBoost
+2026-05-15T00:53:00	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:53:01	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.994;model=CatBoost
+2026-05-15T00:53:01	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:53:01	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.994;model=CatBoost
+2026-05-15T00:53:01	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:53:04	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=submit_review	result=rating=2;sentiment=позитивный;conf=0.994
+2026-05-15T00:53:04	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /submit_review	result=status=302
+2026-05-15T00:53:05	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:53:10	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:53:40	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=products	result=rows=19
+2026-05-15T00:53:40	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /products	result=status=200
+2026-05-15T00:54:04	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:54:24	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.986;model=CatBoost
+2026-05-15T00:54:24	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:54:27	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=submit_review	result=rating=5;sentiment=позитивный;conf=0.986
+2026-05-15T00:54:27	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /submit_review	result=status=302
+2026-05-15T00:54:28	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:54:31	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=models	result=view
+2026-05-15T00:54:31	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /models	result=status=200
+2026-05-15T00:54:33	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=clusters	result=view
+2026-05-15T00:54:33	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /clusters	result=status=200
+2026-05-15T00:54:34	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=products	result=rows=19
+2026-05-15T00:54:34	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /products	result=status=200
+2026-05-15T00:54:54	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:55:19	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=submit_review	result=rating=3;sentiment=позитивный;conf=0.979
+2026-05-15T00:55:19	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /submit_review	result=status=302
+2026-05-15T00:55:20	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:55:29	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=products	result=rows=19
+2026-05-15T00:55:29	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /products	result=status=200
+2026-05-15T00:55:39	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:55:48	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.973;model=CatBoost
+2026-05-15T00:55:48	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T00:55:49	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=submit_review	result=rating=5;sentiment=позитивный;conf=0.973
+2026-05-15T00:55:49	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /submit_review	result=status=302
+2026-05-15T00:55:51	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:55:51	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=submit_review	result=rating=5;sentiment=позитивный;conf=0.973
+2026-05-15T00:55:51	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /submit_review	result=status=302
+2026-05-15T00:55:53	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:55:57	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=products	result=rows=19
+2026-05-15T00:55:57	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /products	result=status=200
+2026-05-15T00:56:23	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:56:32	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=submit_review	result=rating=3;sentiment=позитивный;conf=0.945
+2026-05-15T00:56:32	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /submit_review	result=status=302
+2026-05-15T00:56:33	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:56:36	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=models	result=view
+2026-05-15T00:56:36	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /models	result=status=200
+2026-05-15T00:56:37	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=clusters	result=view
+2026-05-15T00:56:37	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /clusters	result=status=200
+2026-05-15T00:56:42	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=products	result=rows=19
+2026-05-15T00:56:42	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:56:42	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /products	result=status=200
+2026-05-15T00:56:52	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T00:59:20	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.987;model=CatBoost
+2026-05-15T00:59:20	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:11:03	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T01:11:03	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T01:11:06	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T01:11:24	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.975;model=XGBoost
+2026-05-15T01:11:24	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:11:24	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.975;model=XGBoost
+2026-05-15T01:11:24	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:11:37	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.975;model=XGBoost
+2026-05-15T01:11:37	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:11:54	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.741;model=XGBoost
+2026-05-15T01:11:54	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:16	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.810;model=XGBoost
+2026-05-15T01:12:16	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:17	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.810;model=XGBoost
+2026-05-15T01:12:17	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:18	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.810;model=XGBoost
+2026-05-15T01:12:18	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:18	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.810;model=XGBoost
+2026-05-15T01:12:18	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:21	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.810;model=XGBoost
+2026-05-15T01:12:21	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:22	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.810;model=XGBoost
+2026-05-15T01:12:22	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:22	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.810;model=XGBoost
+2026-05-15T01:12:22	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:29	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.869;model=XGBoost
+2026-05-15T01:12:29	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:30	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.869;model=XGBoost
+2026-05-15T01:12:30	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:49	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.987;model=XGBoost
+2026-05-15T01:12:49	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:50	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.987;model=XGBoost
+2026-05-15T01:12:50	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:50	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.987;model=XGBoost
+2026-05-15T01:12:50	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:12:59	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.814;model=XGBoost
+2026-05-15T01:12:59	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:13:15	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.950;model=XGBoost
+2026-05-15T01:13:15	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:13:42	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=products	result=rows=19
+2026-05-15T01:13:42	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /products	result=status=200
+2026-05-15T01:14:10	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=models	result=view
+2026-05-15T01:14:10	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /models	result=status=200
+2026-05-15T01:14:27	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=clusters	result=view
+2026-05-15T01:14:27	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /clusters	result=status=200
+2026-05-15T01:14:51	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=api_cluster_samples	result=cluster=3;n=12
+2026-05-15T01:14:51	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /api/cluster_samples/3	result=status=200
+2026-05-15T01:15:02	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=GET /	result=status=200
+2026-05-15T01:15:40	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=позитивный;0.991;model=XGBoost
+2026-05-15T01:15:40	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200
+2026-05-15T01:15:57	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=predict_ajax	result=негативный;0.555;model=XGBoost
+2026-05-15T01:15:57	user=b68ad584-a5b1-4da3-b936-a0b05cbefa70	action=POST /predict_ajax	result=status=200

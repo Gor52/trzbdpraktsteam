@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block title %}Кластеры{% endblock %}
+{% block content %}
+<h1 class="h3 mb-3">Кластеризация отзывов (PCA-2D)</h1>
+<p class="text-secondary">KMeans и DBSCAN на эмбеддингах. Клик по точке — примеры отзывов кластера.</p>
+<div class="card p-3 mb-3">
+  <div id="clusterPlot" style="min-height:520px;width:100%;"></div>
+</div>
+<div class="row g-3">
+  <div class="col-md-6">
+    <div class="card p-3">
+      <h5>Выбор кластера</h5>
+      <label class="form-label visually-hidden" for="clusterSelect">Номер кластера</label>
+      <select id="clusterSelect" class="form-select mb-2"></select>
+      <button type="button" class="btn btn-outline-primary btn-sm" id="loadSamples">Загрузить примеры</button>
+      <ul id="samples" class="mt-3 small"></ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card p-3">
+      <h5>Сводка по кластерам</h5>
+      <div class="table-responsive" style="max-height:420px;overflow:auto;">
+        <table class="table table-sm">
+          <thead><tr><th>Алг.</th><th>ID</th><th>Размер</th><th>Доля +</th><th>Топ слова</th></tr></thead>
+          <tbody>
+          {% for m in meta %}
+          <tr>
+            <td>{{ m.algorithm }}</td>
+            <td>{{ m.cluster_id }}</td>
+            <td>{{ m.size }}</td>
+            <td>{{ "%.0f%%"|format(100*m.positive_share) }}</td>
+            <td class="small">{{ m.top_words[:8]|join(', ') }}</td>
+          </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<textarea id="steam-json-cluster-plot" class="d-none" readonly>{{ plot_json | tojson }}</textarea>
+<textarea id="steam-json-cluster-meta" class="d-none" readonly>{{ meta | tojson }}</textarea>
+<script>
+(function () {
+  function loadCluster(cid) {
+    fetch('/api/cluster_samples/' + cid).then(function (r) { return r.json(); }).then(function (j) {
+      const ul = document.getElementById('samples');
+      if (!ul) return;
+      ul.innerHTML = '';
+      (j.samples || []).forEach(function (t) {
+        const li = document.createElement('li');
+        li.textContent = String(t);
+        ul.appendChild(li);
+      });
+    });
+  }
+
+  const elPlot = document.getElementById('steam-json-cluster-plot');
+  const elMeta = document.getElementById('steam-json-cluster-meta');
+  let figData = null;
+  let meta = [];
+  try {
+    figData = elPlot ? JSON.parse(elPlot.value) : null;
+  } catch (e) {}
+  try {
+    meta = elMeta ? JSON.parse(elMeta.value) : [];
+  } catch (e) {}
+
+  const host = document.getElementById('clusterPlot');
+  if (typeof Plotly !== 'undefined' && figData && Array.isArray(figData.data) && figData.data.length && host) {
+    try {
+      Plotly.newPlot('clusterPlot', figData.data, figData.layout || {}, {responsive: true, displaylogo: false});
+      host.on('plotly_click', function (ev) {
+        const cd = ev.points[0].customdata;
+        const cid = Array.isArray(cd) ? cd[0] : cd;
+        loadCluster(cid);
+      });
+    } catch (e) {
+      host.textContent = 'Ошибка графика: ' + (e && e.message ? e.message : e);
+    }
+  }
+
+  const sel = document.getElementById('clusterSelect');
+  const km = [];
+  meta.forEach(function (m) {
+    if (m.algorithm === 'KMeans' && km.indexOf(m.cluster_id) < 0) {
+      km.push(m.cluster_id);
+    }
+  });
+  km.sort(function (a, b) { return a - b; });
+  if (sel) {
+    km.forEach(function (c) {
+      const o = document.createElement('option');
+      o.value = String(c);
+      o.textContent = 'KMeans ' + c;
+      sel.appendChild(o);
+    });
+  }
+
+  const btnLoad = document.getElementById('loadSamples');
+  if (btnLoad && sel) {
+    btnLoad.onclick = function () {
+      loadCluster(sel.value);
+    };
+  }
+})();
+</script>
+{% endblock %}

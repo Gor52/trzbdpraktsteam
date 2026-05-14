@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<h3>Анализ отзывов Steam</h3>
+<p class="text-muted small">Ваш id в cookie (сессия): {{ user_id_display }}…</p>
+
+<div class="row">
+  <div class="col-md-6 mb-3">
+    <div class="card">
+      <div class="card-body">
+      <h5 class="card-title">Оставить отзыв</h5>
+      <form method="post" action="/submit_review">
+        <div class="mb-3">
+          <label class="form-label" for="reviewText">Текст</label>
+          <textarea name="text" id="reviewText" class="form-control" rows="4" placeholder="Напишите отзыв…" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Оценка 1–5</label>
+          <select name="rating" class="form-select">
+            {% for i in range(1, 6) %}
+            <option value="{{ i }}" {% if i == 5 %}selected{% endif %}>{{ i }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Игра / товар</label>
+          <input name="product" class="form-control" placeholder="Dead by Daylight" value="My Game">
+        </div>
+        <button type="button" class="btn btn-outline-secondary btn-sm mb-2" id="btnPredict">Тональность (ajax)</button>
+        <div id="predOut" class="small text-primary mb-2"></div>
+        <button type="submit" class="btn btn-primary">Сохранить в SQLite</button>
+      </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mb-3">
+    <div class="card">
+      <div class="card-body">
+      <h5 class="card-title">Рекомендации</h5>
+      <p class="text-muted small">По похожим пользователям (collaborative filtering).</p>
+      <ul class="list-group list-group-flush">
+        {% for p, s in recs %}
+        <li class="list-group-item d-flex justify-content-between">
+          <span>{{ p[:80] }}{% if p|length > 80 %}…{% endif %}</span>
+          <span class="text-secondary">{{ "%.2f"|format(s) }}</span>
+        </li>
+        {% else %}
+        <li class="list-group-item">Нет данных</li>
+        {% endfor %}
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row g-4 mt-1">
+  <div class="col-md-6">
+    <div class="card p-3"><div id="ratingPlot" style="min-height:380px;width:100%;"></div></div>
+  </div>
+  <div class="col-md-6">
+    <div class="card p-3"><div id="linePlot" style="min-height:380px;width:100%;"></div></div>
+  </div>
+</div>
+
+<div class="row g-4 mt-1">
+  <div class="col-12">
+    <div class="card p-3">
+      <h5 class="mb-2">Облако слов</h5>
+      {% if wc_b64 %}
+      <img src="data:image/png;base64,{{ wc_b64 }}" class="img-fluid rounded" alt="wordcloud">
+      {% else %}
+      <p class="text-secondary">WordCloud недоступен</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="row g-4 mt-1">
+  <div class="col-lg-6">
+    <div class="card p-3">
+      <h5>Топ игр по доле позитива</h5>
+      <div class="table-responsive">
+        <table class="table table-sm">
+          <thead><tr><th>Игра</th><th>N</th><th>Доля позитива</th></tr></thead>
+          <tbody>
+          {% for _, row in pos_share_table.iterrows() %}
+            <tr><td>{{ row['product'][:50] }}</td><td>{{ row['n']|int }}</td><td>{{ "%.1f%%"|format(100*row['pos_share']) }}</td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card p-3">
+      <h5>5 частых слов в негативных отзывах</h5>
+      <ul>
+        {% for w, c in top_neg_words %}
+        <li><strong>{{ w }}</strong> — {{ c }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card p-3 mt-4">
+  <h5>Метрики моделей (лучшая: {{ best_model }})</h5>
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <thead><tr><th>Модель</th><th>Acc до</th><th>F1 до</th><th>Acc после</th><th>F1 после</th></tr></thead>
+      <tbody>
+      {% for r in metric_rows %}
+      <tr><td>{{ r.model }}</td><td>{{ r.acc_b }}</td><td>{{ r.f1_b }}</td><td>{{ r.acc_a }}</td><td>{{ r.f1_a }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="small text-secondary mb-0">{{ conclusion }}</p>
+</div>
+
+{% if cluster_plot and cluster_plot.get('data') %}
+<div class="card p-3 mt-4">
+  <h5>Кластеры (фрагмент)</h5>
+  <div id="clusterMini" style="min-height:420px;width:100%;"></div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<textarea id="steam-json-rating" class="d-none" readonly>{{ rating_plot | tojson }}</textarea>
+<textarea id="steam-json-line" class="d-none" readonly>{{ line_plot | tojson }}</textarea>
+<textarea id="steam-json-cluster" class="d-none" readonly>{% if cluster_plot and cluster_plot.get('data') %}{{ cluster_plot | tojson }}{% else %}null{% endif %}</textarea>
+<script>
+(function () {
+  if (typeof Plotly === 'undefined') {
+    return;
+  }
+  function parsePayload(id) {
+    const el = document.getElementById(id);
+    if (!el) return null;
+    try {
+      return JSON.parse(el.value);
+    } catch (e) {
+      return null;
+    }
+  }
+  function drawPlot(divId, payload) {
+    const host = document.getElementById(divId);
+    if (!host) return;
+    if (!payload || !Array.isArray(payload.data) || payload.data.length === 0) return;
+    const layout = payload.layout || {};
+    try {
+      Plotly.newPlot(divId, payload.data, layout, {responsive: true, displaylogo: false});
+    } catch (e) {
+      host.textContent = 'Ошибка графика: ' + (e && e.message ? e.message : e);
+    }
+  }
+  drawPlot('ratingPlot', parsePayload('steam-json-rating'));
+  drawPlot('linePlot', parsePayload('steam-json-line'));
+  const clusterPayload = parsePayload('steam-json-cluster');
+  if (clusterPayload && clusterPayload.data && document.getElementById('clusterMini')) {
+    drawPlot('clusterMini', clusterPayload);
+  }
+
+  const btn = document.getElementById('btnPredict');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      const text = document.getElementById('reviewText').value;
+      const out = document.getElementById('predOut');
+      out.textContent = '…';
+      fetch('/predict_ajax', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({text: text})
+      }).then(function (r) { return r.json(); }).then(function (j) {
+        out.textContent = j.label + ' — уверенность ' + (100 * j.confidence).toFixed(1) + '% (' + j.model + ')';
+      });
+    });
+  }
+})();
+</script>
+{% endblock %}

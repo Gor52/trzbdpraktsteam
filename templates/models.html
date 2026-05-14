@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Сравнение моделей{% endblock %}
+{% block content %}
+<h1 class="h3 mb-3">Сравнение моделей тональности</h1>
+<p class="text-secondary">{{ conclusion }}</p>
+<div class="card p-3 mb-4">
+  <div id="modelsPlot" style="min-height:480px;width:100%;"></div>
+</div>
+<div class="card p-3">
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Модель</th>
+          <th colspan="4">До GridSearch</th>
+          <th colspan="4">После GridSearch</th>
+          <th>best_params</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>Acc</th><th>Prec</th><th>Rec</th><th>F1</th>
+          <th>Acc</th><th>Prec</th><th>Rec</th><th>F1</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ r.model }}</td>
+        <td>{{ "%.3f"|format(r.acc_b) }}</td>
+        <td>{{ "%.3f"|format(r.pr_b) }}</td>
+        <td>{{ "%.3f"|format(r.rc_b) }}</td>
+        <td>{{ "%.3f"|format(r.f1_b) }}</td>
+        <td>{{ "%.3f"|format(r.acc_a) }}</td>
+        <td>{{ "%.3f"|format(r.pr_a) }}</td>
+        <td>{{ "%.3f"|format(r.rc_a) }}</td>
+        <td>{{ "%.3f"|format(r.f1_a) }}</td>
+        <td class="small">{{ r.best_params }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<textarea id="steam-json-models" class="d-none" readonly>{{ plot_json | tojson }}</textarea>
+<script>
+(function () {
+  if (typeof Plotly === 'undefined') return;
+  const el = document.getElementById('steam-json-models');
+  if (!el) return;
+  try {
+    const fig = JSON.parse(el.value);
+    if (fig && fig.data) {
+      Plotly.newPlot('modelsPlot', fig.data, fig.layout || {}, {responsive: true, displaylogo: false});
+    }
+  } catch (e) {}
+})();
+</script>
+{% endblock %}

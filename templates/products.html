@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Товары — Steam{% endblock %}
+{% block content %}
+<h1 class="h3 mb-4">Статистика по играм</h1>
+<div class="card p-3">
+  <div class="table-responsive">
+    <table class="table table-sm table-hover">
+      <thead><tr><th>Игра</th><th>Средний рейтинг</th><th>Отзывов</th><th>Доля позитива</th></tr></thead>
+      <tbody>
+      {% for _, row in table.iterrows() %}
+      <tr>
+        <td>{{ row['product'] }}</td>
+        <td>{{ "%.2f"|format(row.avg_rating) }}</td>
+        <td>{{ row.n|int }}</td>
+        <td>{{ "%.1f%%"|format(100*row.pos_share) }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

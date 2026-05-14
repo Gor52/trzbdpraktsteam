@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Логи администратора{% endblock %}
+{% block content %}
+<h1 class="h3 mb-3">Последние 50 записей app.log</h1>
+<div class="card p-3">
+  <pre class="small text-wrap mb-0" style="white-space:pre-wrap;color:#b8d9ff;">{% for line in lines %}{{ line }}
+{% endfor %}</pre>
+</div>
+{% endblock %}
